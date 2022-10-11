@@ -1,0 +1,143 @@
+:host {
+    font-family: "Poppins", sans-serif;
+}
+
+.black-border {
+    border: 1px solid black;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.clock-wrapper {
+    width: 500px;
+    height: 500px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: black;
+}
+
+.clock-analog {
+    color: white;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.clock-digital {
+    width: 450px;
+    height: 100px;
+    z-index: 2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shadow {
+    border: 8px solid #282828;
+    box-shadow: -4px -4px 10px rgba(116, 116, 116, 0.5),
+        inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 10px rgba(116, 116, 116, 0.5),
+        4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.clock-analog>* {
+    position: absolute;
+}
+
+.clock-analog .source {
+    background-color: white;
+    width: 15px;
+    height: 14px;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.clock-analog .digit {
+    border: 0px solid white;
+    width: 94%;
+    height: 94%;
+    left:3%;
+    top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.clock-analog .digit b {
+    font-size: 1.5rem;
+    color: #808080; 
+}
+
+.hand {
+    border: 0px solid white;
+    width: 100%;
+    height: 100%;
+}
+
+.hand::after {
+    position: absolute;
+    content: "";
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.hour-hand::after{
+    width: 7px;
+    height: 75px;
+    background-color: red;
+}
+
+.minute-hand::after {
+    width: 5px;
+    height: 115px;
+    background-color: #a3d41a;
+}
+
+.secound-hand::after {
+    width: 3px;
+    height: 150px;
+    background-color: #32908f;
+}
+
+.clock-digital .date {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.clock-digital .year,
+.clock-digital .month,
+.clock-digital .day {
+    color: #76ff03;
+}
+
+.clock-digital .hour,
+.clock-digital .minute,
+.clock-digital .secound {
+    color: #fdd835;
+}
+
+
+
+.doublebar{
+    margin: 0px 0px 0px -12px;
+}
+    
